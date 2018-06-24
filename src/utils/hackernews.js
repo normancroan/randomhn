@@ -38,7 +38,7 @@ const getAuthorDataFor = stories => {
   });
 
   return Promise.all(authorDataJobs).then(authorValues => {
-    console.log(authorValues);
+    // console.log(authorValues);
     return stories.map(story => {
       return {
         ...story,
