@@ -8,13 +8,25 @@ import React from "react";
 //by: "rumcajz"
 //• Author id
 //• Author karma score.
-
+//<a href="http://www.yahoo.com">here</a>
+//https://news.ycombinator.com/item?id=17359787
 export default props => {
-  const { title, url, time, score } = props.story;
+  const { title, url, time, score, id } = props.story;
   return (
     <div>
       <p>
-        {title} {url && `(${props.formatUrl(url)})`}
+        {title}
+        <span>
+          (
+          {url ? (
+            <a href={url}>{props.formatUrl(url)}</a>
+          ) : (
+            <a
+              href={`https://news.ycombinator.com/item?id=${id}`}
+            >{`news.ycombinator.com`}</a>
+          )}
+          )
+        </span>
       </p>
     </div>
   );
