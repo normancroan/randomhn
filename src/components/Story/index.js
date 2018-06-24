@@ -34,6 +34,7 @@ export default class StoryContainer extends Component {
         story={this.props.story}
         formatUrl={this.formatUrl}
         formatDate={this.formatDate}
+        position={this.props.position}
       />
     );
   }

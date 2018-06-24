@@ -3,9 +3,11 @@ import Story from "../Story";
 
 export default props => (
   <div>
-    <table>
+    <table style={{ marginLeft: "auto", marginRight: "auto" }}>
       <tbody>
-        {props.stories.map(story => <Story key={story.id} story={story} />)}
+        {props.stories.map((story, i) => (
+          <Story key={story.id} story={story} position={i} />
+        ))}
       </tbody>
     </table>
   </div>

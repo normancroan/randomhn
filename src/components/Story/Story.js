@@ -7,9 +7,10 @@ export default props => {
   const formattedUrl = props.formatUrl(url);
   const formattedDate = props.formatDate(time);
   return (
-    <tr>
+    <tr style={{ backgroundColor: "#f6f6ef" }}>
       <td>
         <p align="left">
+          <span style={{ paddingRight: "0.5em" }}>{props.position + 1}.</span>
           <a href={url ? url : `https://news.ycombinator.com/item?id=${id}`}>
             {title}
           </a>
@@ -26,9 +27,9 @@ export default props => {
           )}
         </p>
         <p align="left">
-          <span style={{ paddingLeft: "0.5em"}}>{`${score} points`}</span>
-          <span style={{ paddingLeft: "0.25em"}}>{`by ${by}`}</span>
-          <span style={{ paddingLeft: "0.25em"}}>{formattedDate}</span>
+          <span style={{ paddingLeft: "1.5em" }}>{`${score} points`}</span>
+          <span style={{ paddingLeft: "0.25em" }}>{`by ${by}`}</span>
+          <span style={{ paddingLeft: "0.25em" }}>{formattedDate}</span>
         </p>
       </td>
     </tr>
