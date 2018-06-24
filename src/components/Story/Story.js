@@ -28,14 +28,18 @@ export default props => {
         </p>
         <p align="left">
           <span style={{ paddingLeft: "1.5em" }}>{`${score} points`}</span>
-          <span style={{ paddingLeft: "0.25em" }}>{`by ${by} (karma: ${authorData.karma})`}</span>
+          {/* <span style={{ paddingLeft: "0.25em" }}>{`by ${by} (karma: ${authorData.karma})`}</span> */}
+          <span style={{ paddingLeft: "0.25em" }}>
+            by <a href={`https://news.ycombinator.com/user?id=${by}`}>{by}</a>{" "}
+            {`(k:${authorData.karma})`}
+          </span>
           <span style={{ paddingLeft: "0.25em" }}>{formattedDate}</span>
         </p>
       </td>
     </tr>
   );
 };
-
+//https://news.ycombinator.com/user?id=mkagenius
 //title: "Microsoft Employees Pressure Leadership to Cancel ICE Contract"
 //url: "https://gizmodo.com/microsoft-employees-pressure-leadership-to-cancel-ice-c-1826965297"
 //time: 1529452555
