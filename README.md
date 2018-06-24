@@ -15,4 +15,5 @@ In this project I'm retrieving 10 random stories from https://hacker-news.fireba
 
 # a few extras
 1. generating and displaying the links for submissions matching the story domain
-2. generating and displaying the link to a user's profile
+2. formatting the story domain
+3. generating and displaying the link to a user's profile
