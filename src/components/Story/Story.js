@@ -3,7 +3,7 @@ import React from "react";
 //from?site=domain
 //title (url points to provided OR item url to comment thread)
 export default props => {
-  const { title, url, time, score, id, by } = props.story;
+  const { title, url, time, score, id, by, authorData } = props.story;
   const formattedUrl = props.formatUrl(url);
   const formattedDate = props.formatDate(time);
   return (
@@ -28,7 +28,7 @@ export default props => {
         </p>
         <p align="left">
           <span style={{ paddingLeft: "1.5em" }}>{`${score} points`}</span>
-          <span style={{ paddingLeft: "0.25em" }}>{`by ${by}`}</span>
+          <span style={{ paddingLeft: "0.25em" }}>{`by ${by} (karma: ${authorData.karma})`}</span>
           <span style={{ paddingLeft: "0.25em" }}>{formattedDate}</span>
         </p>
       </td>
