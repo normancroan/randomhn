@@ -27,7 +27,7 @@ export default props => {
           )}
         </p>
         <p align="left">
-          <span style={{ paddingLeft: "1.5em" }}>{`${score} points`}</span>
+          <span>{`${score} points`}</span>
           {/* <span style={{ paddingLeft: "0.25em" }}>{`by ${by} (karma: ${authorData.karma})`}</span> */}
           <span style={{ paddingLeft: "0.25em" }}>
             by <a href={`https://news.ycombinator.com/user?id=${by}`}>{by}</a>{" "}
