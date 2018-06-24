@@ -17,3 +17,4 @@ In this project I'm retrieving 10 random stories from https://hacker-news.fireba
 1. generating and displaying the links for submissions matching the story domain
 2. formatting the story domain
 3. generating and displaying the link to a user's profile
+4. converting timestamps to something more readable
