@@ -7,7 +7,13 @@ export default class StoriesContainer extends Component {
     stories: []
   };
   componentWillMount() {
-    getRandomStories().then(stories => this.setState({ stories }));
+    getRandomStories().then(stories => {
+      this.setState({
+        stories: stories.sort((a, b) => {
+          return a.score > b.score;
+        })
+      });
+    });
   }
   render() {
     return (
